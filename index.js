@@ -308,7 +308,8 @@ const questionNumber = document.querySelector(".question-number span");
 const volume = document.querySelector(".right-content img");
 
 let currentQuestionIndex = localStorage.getItem("currentQuestionIndex") || 0;
-export let currentScore = parseInt(localStorage.getItem("currentScore")) || 0;
+let currentScore = parseInt(localStorage.getItem("currentScore")) || 0;
+export default currentScore;
 
 let correctAnswerAudio = new Audio("./assets/music/correct-ans.mp3");
 let wrongAnswerAudio = new Audio("./assets/music/wrong-ans.mp3");
@@ -395,4 +396,6 @@ clearBtn.addEventListener("click", () => {
   window.location.reload();
 });
 
-showQuestion();
+if (currentQuestionIndex < 24) {
+  showQuestion();
+}
