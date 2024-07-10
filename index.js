@@ -309,7 +309,6 @@ const volume = document.querySelector(".right-content img");
 
 let currentQuestionIndex = localStorage.getItem("currentQuestionIndex") || 0;
 let currentScore = parseInt(localStorage.getItem("currentScore")) || 0;
-export default currentScore;
 
 let correctAnswerAudio = new Audio("./assets/music/correct-ans.mp3");
 let wrongAnswerAudio = new Audio("./assets/music/wrong-ans.mp3");
@@ -399,3 +398,5 @@ clearBtn.addEventListener("click", () => {
 if (currentQuestionIndex < 24) {
   showQuestion();
 }
+
+export default currentScore;
